@@ -264,6 +264,15 @@ async function generateICS(classTimetable, examTimetable) {
             "PRODID:-//TARUMT//Timetable Generator//EN",
             "CALSCALE:GREGORIAN",
             "METHOD:PUBLISH",
+            "BEGIN:VTIMEZONE",
+            "TZID:Asia/Kuala_Lumpur",
+            "BEGIN:STANDARD",
+            "DTSTART:19700101T000000",
+            "TZOFFSETFROM:+0800",
+            "TZOFFSETTO:+0800",
+            "TZNAME:MYT",
+            "END:STANDARD",
+            "END:VTIMEZONE",
             ...events,
             "END:VCALENDAR"
         ].join("\n");
